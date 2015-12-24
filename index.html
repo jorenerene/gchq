@@ -95,6 +95,11 @@ svg text {
 
 .btn-twitter{color:#fff;background-color:#2ba9e1;border-color:rgba(0,0,0,0.2)}.btn-twitter:hover,.btn-twitter:focus,.btn-twitter:active,.btn-twitter.active,.open .dropdown-toggle.btn-twitter{color:#fff;background-color:#1c92c7;border-color:rgba(0,0,0,0.2)}
 .btn-twitter:active,.btn-twitter.active,.open .dropdown-toggle.btn-twitter{background-image:none}
+
+#progress-img {
+	margin-top:-25%;
+	margin-left:-5%;
+}
 </style>
 
 </head><body id="top">
@@ -445,7 +450,7 @@ svg text {
 </div>
 <div class="col-md-2">
 <br class="hidden-xs">
-<a class="btn btn-success btn-block" id="saveImage"><i class="fa fa-fw fa-file-image-o"></i> Save</a>
+<a class="btn btn-success btn-block" id="saveImage" data-toggle="modal" data-target="#progress-modal"><i class="fa fa-fw fa-file-image-o"></i> Save</a>
 <hr>
 
 <div class="btn-group btn-group-justified" role="group" aria-label="Share on Social Media">
@@ -486,6 +491,27 @@ svg text {
 </div>
 </div>
 </footer>
+
+<!-- Progress Modal -->
+<div id="progress-modal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+
+<!-- Modal content-->
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title">Right-click the below Image of your Progress to Save</h4>
+</div>
+<div class="modal-body">
+<img id="progress-img" class="img-responsive">
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div>
+</div>
+
+</div>
+</div>
 
 <!-- Back to Top -->
 <a href="#top" class="topper-top" id="topper"></a>
@@ -608,8 +634,7 @@ $ (document).ready (function () {
 		data = "data:image/svg+xml;base64," + btoa (xml);
 		img  = new Image ();
 
-		img.setAttribute ("src", data);
-		document.body.appendChild (img);
+		$ ("#progress-img").attr ("src", data);
 		
 		$ ("svg #columns, svg #rows").css ("opacity", "1");
 	});

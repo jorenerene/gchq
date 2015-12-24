@@ -261,6 +261,8 @@ li.dropdown.open > a .fa-plus {
 	bottom: 0;
 	left: 0;
 	overflow: hidden;
+	width:100%;
+	height:100vh;
 }
 .modal-fullscreen .modal-dialog {
 	position: fixed;
@@ -283,11 +285,6 @@ li.dropdown.open > a .fa-plus {
 	line-height:200%;
 }
 .modal-fullscreen .modal-header {
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
-	height: 50px;
 	padding: 10px;
 	border: 0;
 }
@@ -296,17 +293,13 @@ li.dropdown.open > a .fa-plus {
 	font-size: 2em;
 	color: black;
 }
+
 .modal-fullscreen .modal-body {
-	position: absolute;
-	top: 100px;
-	bottom: 60px;
 	width: 100%;
 	font-weight: 300;
 	overflow: auto;
-	
-	padding-left:20%;
-	padding-right:20%;
 }
+
 .modal-fullscreen .modal-footer {
 	position: absolute;
 	right: 0;
