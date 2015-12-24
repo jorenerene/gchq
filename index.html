@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<head lang="en-US">
+<title>GCHQ Christmas Card Puzzle Plus | Jorene Ren&eacute;</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="me" href="https://twitter.com/jorenerene">
+<link rel="canonical" href="https://jorenerene.github.io/gchq">
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico?v=1">
+
+<!-- Google Analytics -->
+<script>
+/*
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+
+ga("create", "UA-XXXX-Y", "auto");  // Replace with your property ID.
+ga("send", "pageview");
+*/
+</script>
+
+<!-- Google Fonts -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<!-- STYLE -->
+<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+	padding-top:0px;
+}
+
+.navbar {
+	margin-bottom:0px;
+}
+
+.btn-primary {
+	background:#031530;
+	border-radius:0;
+}
+
+header .container-fluid {
+	background:#031530;
+}
+
+h2 {
+	color:#031530;
+}
+
+hr {
+	border-color:rgb(78, 97, 106);
+}
+
+header h1 {
+	color:white;
+	padding-top:24px;
+}
+
+.navbar.navbar-default {
+	background:rgba(191, 239, 249,0.4);
+	background:white;
+}
+
+p {
+	line-height:140%;
+}
+
+li {
+	line-height:180%;
+	list-style:square;
+}
+
+svg text {
+	font-size:10px;
+	font-weight:700;
+}
+
+.btn-facebook{color:#fff;background-color:#3b5998;border-color:rgba(0,0,0,0.2)}.btn-facebook:hover,.btn-facebook:focus,.btn-facebook:active,.btn-facebook.active,.open .dropdown-toggle.btn-facebook{color:#fff;background-color:#30487b;border-color:rgba(0,0,0,0.2)}
+.btn-facebook:active,.btn-facebook.active,.open .dropdown-toggle.btn-facebook{background-image:none}
+
+.btn-google-plus{color:#fff;background-color:#dd4b39;border-color:rgba(0,0,0,0.2)}.btn-google-plus:hover,.btn-google-plus:focus,.btn-google-plus:active,.btn-google-plus.active,.open .dropdown-toggle.btn-google-plus{color:#fff;background-color:#ca3523;border-color:rgba(0,0,0,0.2)}
+.btn-google-plus:active,.btn-google-plus.active,.open .dropdown-toggle.btn-google-plus{background-image:none}
+
+.btn-twitter{color:#fff;background-color:#2ba9e1;border-color:rgba(0,0,0,0.2)}.btn-twitter:hover,.btn-twitter:focus,.btn-twitter:active,.btn-twitter.active,.open .dropdown-toggle.btn-twitter{color:#fff;background-color:#1c92c7;border-color:rgba(0,0,0,0.2)}
+.btn-twitter:active,.btn-twitter.active,.open .dropdown-toggle.btn-twitter{background-image:none}
+</style>
+
+</head><body id="top">
+
+<nav class="navbar navbar-default" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="#top">GCHQ Christmas Card Puzzle Plus</a>
+</div>
+
+<div class="collapse navbar-collapse" id="collapse">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="#welcome">Welcome</a></li>
+<li><a href="#instructions">Instructions</a></li>
+<li><a href="#play">Play</a></li>
+</ul>
+</div><!-- .navbar-collapse -->
+</div><!-- .container -->
+</nav>
+
+<header id="welcome">
+<div class="container-fluid">
+<div class="container">
+<div class="row">
+<div class="col-sm-6">
+<img src="assets/img/gchq-white-logo.png" class="img-responsive hidden-xs" style="padding-top:16px;">
+<h1 class="visible-lg">Welcome</h1>
+</div>
+<div class="col-sm-6">
+<img src="assets/img/cyber-header.png" class="img-responsive" style="text-align:right;">
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<br>
+
+<section>
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<p class="lead"><a href="http://www.gchq.gov.uk/who_we_are/Pages/Welcome-to-GCHQ.aspx">The Government Communications Headquarters (GCHQ)</a> is a British intelligence and security organisation</p>
+
+<p>They're also in desperate need of a front-end designer. To that end we interrupted our <a href="http://adventofcode.com">Advent of Code</a> to not only solve Robert Hannigan's much esteemed <a href="http://www.gchq.gov.uk/press_and_media/news_and_features/Pages/Directors-Christmas-puzzle-2015.aspx">Christmas Card Puzzle</a>, but to supplement their offering with an interactive version.</p>
+</div>
+</div>
+</div>
+</section>
+
+<hr>
+
+<section id="instructions">
+<div class="container">
+<div class="row">
+<div class="col-sm-4">
+<h2>Instructions</h2>
+<p class="lead">Each cell in the 25 x 25 square grid <span class="hidden-xs">presented to your right</span> must be shaded either black or white.</p>
+
+<p>Some of the black squares have already been filled in for you. The numbers lining the rows to the left and columns above the grid indicate the length of all consecutive sets of black squares. The numbers are displayed in the order that each consecutive set appears in that line.</p>
+
+<p>For a helpful example:</p>
+
+<ul>
+<li>The numbers <code>1 3 1 3 10 2</code> indicate consecutive sets of one, three, one, three, ten, and two black squares; each of which MUST be separated by one white square to complete a single row or column.</li>
+</ul>
+
+<hr>
+
+<a class="btn btn-block btn-primary" href="#play">Play</a>
+
+<hr class="visible-xs">
+</div>
+<div class="col-sm-8">
+<img src="assets/img/grid-shading-puzzle.jpg" class="img-responsive" alt="Director GCHQ Robert Hannigan's Original Christmas Card Puzzle Illustration" title="Director GCHQ Robert Hannigan's Original Christmas Card Puzzle Illustration">
+</div>
+</div>
+</div>
+</section>
+
+<hr>
+
+<main id="play">
+<div class="container">
+<div class="row">
+<div class="col-md-10" style="overflow-x:auto;overflow-y:hidden;text-align:center;">
+
+<svg width="720" height="720" id="puzzle" class="small" style="overflow:auto;">
+
+<g id="columns">
+
+<!-- * 13: 13, 26, 39, 52, 65, 78, 91, 104, 117, 130, 143, 156, 169 -->
+<!-- 9 TOP-->
+
+<text x="182" y="104" text-anchor="end">7
+<tspan x="182" y="117">2</tspan>
+<tspan x="182" y="130">1</tspan>
+<tspan x="182" y="143">1</tspan>
+<tspan x="182" y="156">7</tspan>
+</text>
+
+<text x="195" y="91" text-anchor="end">1
+<tspan x="195" y="104">1</tspan>
+<tspan x="195" y="117">2</tspan>
+<tspan x="195" y="130">2</tspan>
+<tspan x="195" y="143">1</tspan>
+<tspan x="195" y="156">1</tspan>
+</text>
+
+<text x="208" y="52" text-anchor="end">1
+<tspan x="208" y="65">3</tspan>
+<tspan x="208" y="78">1</tspan>
+<tspan x="208" y="91">3</tspan>
+<tspan x="208" y="104">1</tspan>
+<tspan x="208" y="117">3</tspan>
+<tspan x="208" y="130">1</tspan>
+<tspan x="208" y="143">3</tspan>
+<tspan x="208" y="156">1</tspan>
+</text>
+
+<text x="221" y="65" text-anchor="end">1
+<tspan x="221" y="78">3</tspan>
+<tspan x="221" y="91">1</tspan>
+<tspan x="221" y="104">1</tspan>
+<tspan x="221" y="117">5</tspan>
+<tspan x="221" y="130">1</tspan>
+<tspan x="221" y="143">3</tspan>
+<tspan x="221" y="156">1</tspan>
+</text>
+
+<text x="234" y="65" text-anchor="end">1
+<tspan x="234" y="78">3</tspan>
+<tspan x="234" y="91">1</tspan>
+<tspan x="234" y="104">1</tspan>
+<tspan x="234" y="117">4</tspan>
+<tspan x="234" y="130">1</tspan>
+<tspan x="234" y="143">3</tspan>
+<tspan x="234" y="156">1</tspan>
+</text>
+
+<text x="247" y="91" text-anchor="end">1
+<tspan x="247" y="104">1</tspan>
+<tspan x="247" y="117">1</tspan>
+<tspan x="247" y="130">2</tspan>
+<tspan x="247" y="143">1</tspan>
+<tspan x="247" y="156">1</tspan>
+</text>
+
+<text x="260" y="78" text-anchor="end">7
+<tspan x="260" y="91">1</tspan>
+<tspan x="260" y="104">1</tspan>
+<tspan x="260" y="117">1</tspan>
+<tspan x="260" y="130">1</tspan>
+<tspan x="260" y="143">1</tspan>
+<tspan x="260" y="156">7</tspan>
+</text>
+
+<text x="273" y="130" text-anchor="end">1
+<tspan x="273" y="143">1</tspan>
+<tspan x="273" y="156">3</tspan>
+</text>
+
+<text x="286" y="78" text-anchor="end">2
+<tspan x="286" y="91">1</tspan>
+<tspan x="286" y="104">2</tspan>
+<tspan x="286" y="117">1</tspan>
+<tspan x="286" y="130">8</tspan>
+<tspan x="286" y="143">2</tspan>
+<tspan x="286" y="156">1</tspan>
+</text>
+
+<text x="299" y="65" text-anchor="end">2
+<tspan x="299" y="78">2</tspan>
+<tspan x="299" y="91">1</tspan>
+<tspan x="299" y="104">2</tspan>
+<tspan x="299" y="117">1</tspan>
+<tspan x="299" y="130">1</tspan>
+<tspan x="299" y="143">1</tspan>
+<tspan x="299" y="156">2</tspan>
+</text>
+
+<text x="312" y="104" text-anchor="end">1
+<tspan x="312" y="117">7</tspan>
+<tspan x="312" y="130">3</tspan>
+<tspan x="312" y="143">2</tspan>
+<tspan x="312" y="156">1</tspan>
+</text>
+
+<text x="325" y="65" text-anchor="end">1
+<tspan x="325" y="78">2</tspan>
+<tspan x="325" y="91">3</tspan>
+<tspan x="325" y="104">1</tspan>
+<tspan x="325" y="117">1</tspan>
+<tspan x="325" y="130">1</tspan>
+<tspan x="325" y="143">1</tspan>
+<tspan x="325" y="156">1</tspan>
+</text>
+
+<text x="338" y="104" text-anchor="end">4
+<tspan x="338" y="117">1</tspan>
+<tspan x="338" y="130">1</tspan>
+<tspan x="338" y="143">2</tspan>
+<tspan x="338" y="156">6</tspan>
+</text>
+
+<text x="351" y="78" text-anchor="end">3
+<tspan x="351" y="91">3</tspan>
+<tspan x="351" y="104">1</tspan>
+<tspan x="351" y="117">1</tspan>
+<tspan x="351" y="130">1</tspan>
+<tspan x="351" y="143">3</tspan>
+<tspan x="351" y="156">1</tspan>
+</text>
+
+<text x="364" y="104" text-anchor="end">1
+<tspan x="364" y="117">2</tspan>
+<tspan x="364" y="130">5</tspan>
+<tspan x="364" y="143">2</tspan>
+<tspan x="364" y="156">2</tspan>
+</text>
+
+<text x="377" y="52" text-anchor="end">2
+<tspan x="377" y="65">2</tspan>
+<tspan x="377" y="78">1</tspan>
+<tspan x="377" y="91">1</tspan>
+<tspan x="377" y="104">1</tspan>
+<tspan x="377" y="117">1</tspan>
+<tspan x="377" y="130">1</tspan>
+<tspan x="377" y="143">2</tspan>
+<tspan x="377" y="156">1</tspan>
+</text>
+
+<text x="390" y="78" text-anchor="end">1
+<tspan x="390" y="91">3</tspan>
+<tspan x="390" y="104">3</tspan>
+<tspan x="390" y="117">2</tspan>
+<tspan x="390" y="130">1</tspan>
+<tspan x="390" y="143">8</tspan>
+<tspan x="390" y="156">1</tspan>
+</text>
+
+<text x="403" y="130" text-anchor="end">6
+<tspan x="403" y="143">2</tspan>
+<tspan x="403" y="156">1</tspan>
+</text>
+
+<text x="416" y="91" text-anchor="end">7
+<tspan x="416" y="104">1</tspan>
+<tspan x="416" y="117">4</tspan>
+<tspan x="416" y="130">1</tspan>
+<tspan x="416" y="143">1</tspan>
+<tspan x="416" y="156">3</tspan>
+</text>
+
+<text x="429" y="104" text-anchor="end">1
+<tspan x="429" y="117">1</tspan>
+<tspan x="429" y="130">1</tspan>
+<tspan x="429" y="143">1</tspan>
+<tspan x="429" y="156">4</tspan>
+</text>
+
+<text x="442" y="91" text-anchor="end">1
+<tspan x="442" y="104">3</tspan>
+<tspan x="442" y="117">1</tspan>
+<tspan x="442" y="130">3</tspan>
+<tspan x="442" y="143">7</tspan>
+<tspan x="442" y="156">1</tspan>
+</text>
+
+<text x="455" y="52" text-anchor="end">1
+<tspan x="455" y="65">3</tspan>
+<tspan x="455" y="78">1</tspan>
+<tspan x="455" y="91">1</tspan>
+<tspan x="455" y="104">1</tspan>
+<tspan x="455" y="117">2</tspan>
+<tspan x="455" y="130">1</tspan>
+<tspan x="455" y="143">1</tspan>
+<tspan x="455" y="156">4</tspan>
+</text>
+
+<text x="468" y="91" text-anchor="end">1
+<tspan x="468" y="104">3</tspan>
+<tspan x="468" y="117">1</tspan>
+<tspan x="468" y="130">4</tspan>
+<tspan x="468" y="143">3</tspan>
+<tspan x="468" y="156">3</tspan>
+</text>
+
+<text x="481" y="78" text-anchor="end">1
+<tspan x="481" y="91">1</tspan>
+<tspan x="481" y="104">2</tspan>
+<tspan x="481" y="117">2</tspan>
+<tspan x="481" y="130">2</tspan>
+<tspan x="481" y="143">6</tspan>
+<tspan x="481" y="156">1</tspan>
+</text>
+
+<text x="494" y="91" text-anchor="end">7
+<tspan x="494" y="104">1</tspan>
+<tspan x="494" y="117">3</tspan>
+<tspan x="494" y="130">2</tspan>
+<tspan x="494" y="143">1</tspan>
+<tspan x="494" y="156">1</tspan>
+</text>
+</g>
+
+<!-- * 13: 13, 26, 39, 52, 65, 78, 91, 104, 117, 130, 143, 156, 169 -->
+<!-- 9 LEFT -->
+
+<g id="rows">
+<text text-anchor="end" class="wday" dx="169" dy="171">7 3 1 1 7</text>
+<text text-anchor="end" class="wday" dx="169" dy="184">1 1 2 2 1 1</text>
+<text text-anchor="end" class="wday" dx="169" dy="197">1 3 1 3 1 1 3 1</text>
+<text text-anchor="end" class="wday" dx="169" dy="210">1 3 1 1 6 1 3 1</text>
+<text text-anchor="end" class="wday" dx="169" dy="223">1 3 1 5 2 1 3 1</text>
+<text text-anchor="end" class="wday" dx="169" dy="236">1 1 2 1 1</text>
+<text text-anchor="end" class="wday" dx="169" dy="249">7 1 1 1 1 1 7</text>
+<text text-anchor="end" class="wday" dx="169" dy="262">3 3</text>
+<text text-anchor="end" class="wday" dx="169" dy="275">1 2 3 1 1 3 1 1 2</text>
+<text text-anchor="end" class="wday" dx="169" dy="288">1 1 3 2 1 1</text>
+<text text-anchor="end" class="wday" dx="169" dy="301">4 1 4 2 1 2</text>
+<text text-anchor="end" class="wday" dx="169" dy="314">1 1 1 1 1 4 1 3</text>
+<text text-anchor="end" class="wday" dx="169" dy="327">2 1 1 1 2 5</text>
+<text text-anchor="end" class="wday" dx="169" dy="340">3 2 2 6 3 1</text>
+<text text-anchor="end" class="wday" dx="169" dy="353">1 9 1 1 2 1</text>
+<text text-anchor="end" class="wday" dx="169" dy="366">2 1 2 2 3 1</text>
+<text text-anchor="end" class="wday" dx="169" dy="379">3 1 1 1 1 5 1</text>
+<text text-anchor="end" class="wday" dx="169" dy="392">1 2 2 5</text>
+<text text-anchor="end" class="wday" dx="169" dy="405">7 1 2 1 1 1 3</text>
+<text text-anchor="end" class="wday" dx="169" dy="418">1 1 2 1 2 2 1</text>
+<text text-anchor="end" class="wday" dx="169" dy="431">1 3 1 4 5 1</text>
+<text text-anchor="end" class="wday" dx="169" dy="444">1 3 1 3 10 2</text>
+<text text-anchor="end" class="wday" dx="169" dy="457">1 3 1 1 6 6</text>
+<text text-anchor="end" class="wday" dx="169" dy="470">1 1 2 1 1 2</text>
+<text text-anchor="end" class="wday" dx="169" dy="483">7 2 1 2 5</text>
+</g>
+
+<g id="grid">
+</g>
+
+</svg>
+
+</div>
+<div class="col-md-2">
+<br class="hidden-xs">
+<a class="btn btn-success btn-block" id="saveImage"><i class="fa fa-fw fa-file-image-o"></i> Save</a>
+<hr>
+
+<div class="btn-group btn-group-justified" role="group" aria-label="Share on Social Media">
+<div class="btn-group" role="group">
+<a target="_blank" class="btn btn-facebook btn-sm" href="http://facebook.com/sharer.php?s=100&p[title]=GCHQ+Christmas+Card+Puzzle+Plus+by+Jorene+Ren&eacute;&p[summary]=Each+cell+in+the+25+x+25+square+grid+presented+to+your+right+must+be+shaded+either+black+or+white&p[url]=http://jorenerene.github.io/gchq&p[images][0]=http://jorenerene.github.io/gchq/assets/img/grid-shading-puzzle.jpg"><i class="fa fa-fw fa-facebook"></i></a>
+</div>
+
+<div class="btn-group" role="group">
+<a target="_blank" class="btn btn-twitter btn-sm" href="https://twitter.com/share?url=http://jorenerene.github.io/gchq&text=GCHQ+Christmas+Card+Puzzle+Plus+by+Jorene+Ren&eacute;&via=jorenerene&related=jorenerene:Designer+and+Developer+behind+your+favorite+GCHQ+upgrade,prosperful,prosperagency"><i class="fa fa-fw fa-twitter"></i></a>
+</div>
+
+<div class="btn-group" role="group">
+<a target="_blank" class="btn btn-google-plus btn-sm" href="https://plus.google.com/share?url=http://jorenerene.github.io/gchq"><i class="fa fa-fw fa-google-plus"></i></a>
+</div>
+</div><!-- .brn-group-justified -->
+
+</div>
+</div>
+</div>
+</main>
+
+<footer>
+<div class='container'>
+
+<hr>
+
+<div class='row'>
+<div class='col-sm-6'>
+
+<p class='small'>&copy; <!--1983 - --><?php echo date ("Y") ?> <a href="http://prosperful.com">Prosperful</a>. All rights reserved.</p>
+
+</div>
+<div class='col-sm-6'>
+
+<p class='text-right small'>Designed with <span class="heart"><i class="fa fa-heart"></i></span> and developed with <i class="fa fa-coffee"></i></p>
+
+</div>
+</div>
+</div>
+</footer>
+
+<!-- Back to Top -->
+<a href="#top" class="topper-top" id="topper"></a>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script src="script.js"></script>
+
+<script>
+$ (document).ready (function () {
+	// INITIATE
+	var rect = $ ("<rect>", {
+		width:327,
+		height:327,
+		fill:"black",
+		x: 173,
+		y: 160,
+		id: "background"
+	});
+
+	$ (rect).attr ("width", 327);
+	$ (rect).attr ("height", 327);
+
+	$ ("#grid").append (rect);
+
+	for (var x = 0; x < 25; x ++) {
+		for (var y = 0; y < 25; y ++) {
+			var rect = $ ("<rect>", {
+				class: "square",
+				width:11,
+				height:11,
+				fill:"white",
+				"data-x":x,
+				"data-y":y,
+				x: (x * 13) + 175,
+				y: (y * 13) + 162
+			});
+
+			$ (rect).attr ("width", 11);
+			$ (rect).attr ("height", 11);
+
+			$ ("#grid").append (rect);
+		}
+	}
+
+	$ ("#puzzle").html ($ ("#puzzle").html ());
+	
+	// TRANSFORM HACK
+	$ ("svg g").attr ("transform", "scale(1.5) translate (-80, -20)");
+	
+	// GIVEN
+	var fill = [
+		[3, 3],
+		[4, 3],
+		[12, 3],
+		[13, 3],
+		[21, 3],
+		[6, 8],
+		[7, 8],
+		[10, 8],
+		[14, 8],
+		[15, 8],
+		[18, 8],
+		[6, 16],
+		[11, 16],
+		[16, 16],
+		[20, 16],
+		[3, 21],
+		[4, 21],
+		[9, 21],
+		[10, 21],
+		[15, 21],
+		[20, 21],
+		[21, 21]
+	];
+	
+	for (var x = 0; x < fill.length; x ++) {
+		$ ("#grid rect[data-x=" + fill [x] [0] + "][data-y=" + fill [x] [1]+ "]").attr ("fill", "black");
+	}
+	
+	// INDICATE
+	$ (".square").hover (function () {
+		var column = $ (this).attr ("data-x");
+		var row = $ (this).attr ("data-y");
+		
+		$ ("#grid rect[data-x=" + column + "]").not ("[fill=black]").attr ("fill", "lightgray");
+		$ ("#grid rect[data-y=" + row + "]").not ("[fill=black]").attr ("fill", "lightgray");
+	}, function () {
+		var column = $ (this).attr ("data-x");
+		var row = $ (this).attr ("data-y");
+		
+		$ ("#grid rect[data-x=" + column + "]").not ("[fill=black]").attr ("fill", "white");
+		$ ("#grid rect[data-y=" + row + "]").not ("[fill=black]").attr ("fill", "white");
+	});
+	
+	// FILL
+	$ (".square").click (function () {
+		var column = $ (this).attr ("data-x");
+		var row = $ (this).attr ("data-y");
+		
+		var replace = $ ("#grid rect[data-x=" + column + "][data-y=" + row + "]").attr ("fill");
+
+		if (replace == "lightgray") $ ("#grid rect[data-x=" + column + "][data-y=" + row + "]").attr ("fill", "black");
+		else $ ("#grid rect[data-x=" + column + "][data-y=" + row + "]").attr ("fill", "white");
+		
+		if (check ()) alert ("Congratulations");
+	});
+	
+	// SAVE
+	// https://gist.github.com/Caged/4649511
+	$ ("#saveImage").click (function () {
+		$ ("svg #columns, svg #rows").css ("opacity", "0");
+		
+		var svg  = document.getElementById ("puzzle");
+		xml  = new XMLSerializer ().serializeToString  (svg);
+		data = "data:image/svg+xml;base64," + btoa (xml);
+		img  = new Image ();
+
+		img.setAttribute ("src", data);
+		document.body.appendChild (img);
+		
+		$ ("svg #columns, svg #rows").css ("opacity", "1");
+	});
+});
+
+// CHECK ROW
+function checkRow (y) {
+	var criteria = $ ("#rows text").eq (y).text ().split (" ");
+	
+	var row = "";
+
+	$ ("#grid rect[data-y=" + y + "]").each (function (index, value) {
+		row += $ (this).attr ("fill") == "black" ? "1" : "0";
+	});
+	
+	for (var i = 0; i < criteria.length; i ++) {
+		if (criteria [i] == "") continue
+	
+		var set = Array (parseInt (criteria [i]) + 1).join ("1");
+		
+		var mark = row.indexOf (set);
+		
+		// if (mark == -1) {
+		if (row.indexOf ("0" + set) == -1 && row.indexOf (set + "0") == -1) {
+			console.log ("Criteria Failed from Row " + y);
+			return false;
+		}
+		
+		console.log ((i + 1) + " Criteria Passed from Row " + y);
+		
+		row = row.substring (mark + 1 + set.length);
+	}
+	
+	return true;
+}
+
+// CHECK COLUMN
+function checkColumn (x) {
+	var criteria = $ ("#columns text").eq (x).text ().split ("\n");
+	// console.log (criteria);
+	
+	var column = "";
+	
+	$ ("#grid rect[data-x=" + x + "]").each (function (index, value) {
+		column += $ (this).attr ("fill") == "black" ? "1" : "0";
+	});
+	
+	for (var i = 0; i < criteria.length; i ++) {
+		if (criteria [i] == "") continue
+	
+		var set = Array (parseInt (criteria [i])).join ("1") + "1";
+		
+		var mark = column.indexOf (set);
+		
+		// if (mark == -1) {
+		if (column.indexOf ("0" + set) == -1 && column.indexOf (set + "0") == -1) {
+			console.log ("Criteria Failed from Column " + x);
+			return false;
+		}
+		
+		console.log ((i + 1) + " Criteria Passed from Column " + x);
+		
+		column = column.substring (mark + 1 + set.length);
+	}
+	
+	return true;
+}
+
+// CHECK
+function check () {
+	// ROWS
+	var result;
+	for (var y = 0; y < 25; y ++) {
+		result = checkRow (y);
+		if (!result) return false;
+	}
+
+	// COLUMNS
+	for (var x = 0; x < 25; x ++) {
+		result = checkColumn (x);
+		if (!result) return false;
+	}
+	
+	return true;
+}
+</script>
+
+</body></html>
