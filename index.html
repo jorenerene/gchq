@@ -153,7 +153,7 @@ svg text {
 <div class="col-sm-12">
 <p class="lead"><a href="http://www.gchq.gov.uk/who_we_are/Pages/Welcome-to-GCHQ.aspx">The Government Communications Headquarters (GCHQ)</a> is a British intelligence and security organisation</p>
 
-<p>The GCHQ is in desperate need of a front-end designer. To that end we interrupted our <a href="http://adventofcode.com">Advent of Code</a> to not only solve Robert Hannigan's much esteemed <a href="http://www.gchq.gov.uk/press_and_media/news_and_features/Pages/Directors-Christmas-puzzle-2015.aspx">Christmas Card Puzzle</a>, but to supplement their offering with an interactive version.</p>
+<p>We interrupted our <a href="http://adventofcode.com">Advent of Code</a> to not only solve Robert Hannigan's much esteemed <a href="http://www.gchq.gov.uk/press_and_media/news_and_features/Pages/Directors-Christmas-puzzle-2015.aspx">Christmas Card Puzzle</a>, but to supplement their offering with an interactive version.</p>
 </div>
 </div>
 </div>
@@ -625,7 +625,10 @@ $ (document).ready (function () {
 		if (replace == "lightgray") $ ("#grid rect[data-x=" + column + "][data-y=" + row + "]").attr ("fill", "black");
 		else $ ("#grid rect[data-x=" + column + "][data-y=" + row + "]").attr ("fill", "white");
 		
-		if (check ()) alert ("Congratulations");
+		if (check ()) {
+			ga ("send", "event", "Progress", "Complete");
+			alert ("Congratulations");
+		}
 	});
 	
 	// SAVE
@@ -641,6 +644,17 @@ $ (document).ready (function () {
 		$ ("#progress-img").attr ("src", data);
 		
 		$ ("svg #columns, svg #rows").css ("opacity", "1");
+		
+		ga ("send", "event", "Progress", "Save");
+	});
+	
+	// Share
+	$ (".btn-group-justified .btn").click (function () {
+		var network = $ (this).attr ("class");
+		network = network.replace ("btn-", "").replace ("btn ", "").replace (" btn-lg", "");
+		network = network.charAt (0).toUpperCase () + network.slice (1).toLowerCase ();
+		
+		ga ("send", "event", "Social", "Share", network);
 	});
 });
 
